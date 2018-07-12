@@ -8,13 +8,14 @@ var eleccionMaquina;
 
 function comenzar()
 {
-	
+	eleccionMaquina = Math.floor(Math.random() * 3) + 1;
 
+    console.log(eleccionMaquina);
 
 }//FIN DE LA FUNCIÓN
 function piedra()
 {
-	
+	eleccionJugador = document.getElementById
 
 }//FIN DE LA FUNCIÓN
 function papel()
