@@ -24,22 +24,22 @@ function comenzar()
 
 function verificar()
 {
-	var numeroSecreto = document.getElementById("numero").value;
+	numeroSecreto = document.getElementById("numero").value;
   contadorIntentos = contadorIntentos + 1;
 
   if ((numeroSecreto == secreto) && contadorIntentos == 1) {
     alert("Usted es un psiquico");
-  } else if (contadorIntentos == 2) {
+  } else if ((numeroSecreto == secreto) && contadorIntentos == 2) {
       alert("Excelente percepcion");
-  } else if (contadorIntentos == 3) {
+  } else if ((numeroSecreto == secreto) && contadorIntentos == 3) {
 	  alert("Esto es suerte");
-  } else if (contadorIntentos == 4) {
+  } else if ((numeroSecreto == secreto) && contadorIntentos == 4) {
 	  alert("Excelente tecnica");
-  } else if (contadorIntentos == 5) {
+  } else if ((numeroSecreto == secreto) && contadorIntentos == 5) {
 	  alert("Usted esta en la media");
-  } else if (contadorIntentos >= 6) {
+  } else if ((numeroSecreto == secreto) && contadorIntentos > 5 && contadorIntentos <= 10) {
 	  alert("Falta tecnica");
-  } else if (contadorIntentos > 10) {
+  } else if ((numeroSecreto == secreto) && contadorIntentos > 10) {
 	  alert("Afortunado en el amor");
   } else if (numeroSecreto > secreto) {
 	  alert("Se paso");
@@ -48,6 +48,7 @@ function verificar()
   }
 	
   document.getElementById("intentos").value = contadorIntentos;
-	
+  
+  console.log(contadorIntentos);
 
 }
