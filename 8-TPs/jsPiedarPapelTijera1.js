@@ -38,11 +38,31 @@ function piedra()
 }//FIN DE LA FUNCIÓN
 function papel()
 {
-	eleccionJugador = document.getElementsByClassName("papel()").value;
+	eleccionJugador = document.getElementsByClassName("papel()").value = "papel";
+
+	if (eleccionJugador == eleccionMaquina) {
+		alert("Empate!");
+	} else if (eleccionMaquina == "piedra") {
+		alert("Jugador gana!");
+	} else {
+		alert("Computadora gana!");
+	}
+
+	console.log(eleccionJugador);
 
 }//FIN DE LA FUNCIÓN
 function tijera()
 {
-	eleccionJugador = document.getElementsByClassName("tijera()").value;
+	eleccionJugador = document.getElementsByClassName("tijera()").value = "tijera";
+
+	if (eleccionJugador == eleccionMaquina) {
+		alert("Empate!");
+	} else if (eleccionMaquina == "papel") {
+		alert("Jugador gana!");
+	} else {
+		alert("Computadora gana!");
+	}
+
+	console.log(eleccionJugador);
 
 }//FIN DE LA FUNCIÓN
