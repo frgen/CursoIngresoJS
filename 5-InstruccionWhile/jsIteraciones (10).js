@@ -18,6 +18,8 @@ function mostrar()
 
 	while(respuesta!="no")
 	{
+		numero = prompt("Ingrese numero");
+		numero = parseInt(numero);
 		while (isNaN(numero)) {
 			numero = prompt("Ingrese numero");
 		    numero = parseInt(numero);
@@ -57,6 +59,13 @@ if (diferencia > 0) {
 
 document.write(negativos + "<br>");
 document.write(positivos + "<br>");
+document.write(ContadorPositivos + "<br>");
+document.write(ContadorNegativos + "<br>");
+document.write(ContadorCeros + "<br>");
+document.write(ContadorPares + "<br>");
+document.write(PromedioPositivos + "<br>");
+document.write(PromedioNegativos + "<br>");
+document.write(diferencia + "<br>");
 document.write(msg);
 
 console.log(negativos);
