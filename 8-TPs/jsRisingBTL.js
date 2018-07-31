@@ -19,6 +19,11 @@ function ComenzarIngreso ()
     edad = prompt("Ingrese la edad");
     edad = parseInt(edad);
 
+    while (isNaN(edad)) {
+        edad = prompt("Ingrese la edad");
+        edad = parseInt(edad);
+    }
+
     while (edad < 18 || edad > 90) {
         edad = prompt("Edad incorrecta, ingrese una edad entre 18 y 90 años inclusive");
     }
@@ -39,6 +44,11 @@ function ComenzarIngreso ()
     }
 
     SueldoBruto = prompt("Ingrese el sueldo bruto");
+
+    while (isNaN(edad)) {
+        SueldoBruto = prompt("Ingrese el sueldo bruto");
+        SueldoBruto = parseInt(SueldoBruto);
+    }
 
     while (SueldoBruto < 8000) {
         SueldoBruto = prompt("El sueldo bruto no debe ser menor a 8000");
