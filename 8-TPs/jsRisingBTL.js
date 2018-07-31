@@ -16,25 +16,27 @@ function ComenzarIngreso ()
     var NumLegajo;
     var nacionalidad;
 
-    edad = prompt("Ingrese la edad");
+    /* Valido la edad */
+
+    edad = prompt("Ingrese la edad (entre 18 y 90 años inclusive)");
     edad = parseInt(edad);
 
-    while (isNaN(edad)) {
-        edad = prompt("Ingrese la edad");
+    while (edad < 18 || edad > 90 || isNaN(edad)) {
+        edad = prompt("Edad inválida (ingrese una edad entre 18 y 90 años inclusive)");
         edad = parseInt(edad);
     }
 
-    while (edad < 18 || edad > 90) {
-        edad = prompt("Edad incorrecta, ingrese una edad entre 18 y 90 años inclusive");
-    }
+    /* Valido el sexo */
 
-    sexo = prompt("Ingrese el sexo");
+    sexo = prompt("Ingrese el sexo (M ó F)");
     sexo = sexo.toUpperCase();
 
     while (sexo != "M" && sexo != "F") {
-        sexo = prompt("Sexo incorrecto, ingrese 'M' o 'F' ");
+        sexo = prompt("Sexo inválido (ingrese 'M' o 'F')");
         sexo = sexo.toUpperCase();
     }
+
+    /* Valido el estado civil */
 
     EstadoCivil = prompt("Ingrese el estado civil");
     EstadoCivil = parseInt(EstadoCivil);
@@ -43,25 +45,29 @@ function ComenzarIngreso ()
         EstadoCivil = prompt("Opción incorrecta, ingrese 1 soltero, 2 casado, 3 divorciado ó 4 viudo");
     }
 
-    SueldoBruto = prompt("Ingrese el sueldo bruto");
+    /* Valido el sueldo bruto */
 
-    while (isNaN(edad)) {
-        SueldoBruto = prompt("Ingrese el sueldo bruto");
+    SueldoBruto = prompt("Ingrese el sueldo bruto (no debe ser menor a 8000)");
+    SueldoBruto = parseInt(SueldoBruto);
+
+    while (SueldoBruto < 8000 || isNaN(SueldoBruto)) {
+        SueldoBruto = prompt("El sueldo bruto no debe ser menor a 8000");
         SueldoBruto = parseInt(SueldoBruto);
     }
 
-    while (SueldoBruto < 8000) {
-        SueldoBruto = prompt("El sueldo bruto no debe ser menor a 8000");
-    }
+    /* Valido el numero de legajo */
 
-    NumLegajo = prompt("Ingrese el numero de legajo");
+    NumLegajo = prompt("Ingrese el numero de legajo (cuatro cifras)");
     NumLegajo = parseInt(NumLegajo);
 
-    while (NumLegajo < 1000) {
+    while (NumLegajo < 1000 || isNaN(NumLegajo)) {
         NumLegajo = prompt("El nº de legajo no debe ser menor a 1000");
+        NumLegajo = parseInt(NumLegajo);
     }
 
-    nacionalidad = prompt("Ingrese la nacionalidad");
+    /* Valido la nacionalidad */
+
+    nacionalidad = prompt("Ingrese la nacionalidad (A, E ó N)");
     nacionalidad = nacionalidad.toUpperCase();
 
     while (nacionalidad != "A" && nacionalidad != "E" && nacionalidad != "N") {
@@ -98,6 +104,8 @@ function ComenzarIngreso ()
         default:
             nacionalidad = "Nacionalizado/a";
     }
+
+    /* Muestro los resultados */
 
     document.getElementById("Edad").value = edad + " años";
     document.getElementById("Sexo").value = sexo;

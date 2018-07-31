@@ -73,7 +73,7 @@ function mostrar()
             mayores++;
         }
 
-        /* Busco el maximo y el minimo */
+        /* Busco el máximo y el mínimo */
 
         if (edad > max) {
             max = edad;
