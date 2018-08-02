@@ -4,13 +4,14 @@ function mostrar()
     var numero = prompt("Ingrese numero");
     numero = parseInt(numero);
 
-    if (numero % 2 != 0) {
-        numero--;
+
+    for (i = 1; i <= numero; i++) {
+        if (i % 2 == 0) {
+            console.log(i);
+            pares++;
+        }
     }
 
-    for (i = numero; i <= numero; i = i-2) {
-        console.log(i);
-        pares++;
-    }
+    console.log("Los pares: " + pares);
 
 }//FIN DE LA FUNCIÓN
